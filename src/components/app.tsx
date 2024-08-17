@@ -45,7 +45,7 @@ export default function App() {
 
     setInputValue('');
 
-  }, [inputValue, setTodos]);
+  }, [inputValue]);
 
   const onInputChange = (value: string) => {
     if (inputValue.length === 0 && value === " ") {
