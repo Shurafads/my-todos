@@ -54,14 +54,14 @@ export default function App() {
     setInputValue(value);
   };
 
-  const onClearButtonClick = () => {
+  const onClearButtonClick = useCallback(() => {
     setTodos(prev => prev.filter((todo) => todo.isActive));
     setCurrentFilter(FILTER_OPTION.ALL);
-  };
+  }, []);
 
-  const changeCurrentFilter = (value: FilterOptionValue) => {
+  const changeCurrentFilter = useCallback((value: FilterOptionValue) => {
     setCurrentFilter(value);
-  };
+  }, []);
 
   useEffect(() => {
     const callback = (evt: KeyboardEvent) => {

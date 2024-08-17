@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { FILTER_OPTION } from "../dependenses/const";
 import { FilterOptionValue, Todo } from "../types/types";
 import {
@@ -16,7 +17,7 @@ type FilterProps = {
   changeCurrentFilter: (value: FilterOptionValue) => void;
 };
 
-export default function Filter({ todos, currentFilter, onClearButtonClick, changeCurrentFilter}: FilterProps) {
+export default memo(function Filter({ todos, currentFilter, onClearButtonClick, changeCurrentFilter}: FilterProps) {
 
   const todosCounter = todos.filter((todo) => todo.isActive).length;
 
@@ -58,4 +59,4 @@ export default function Filter({ todos, currentFilter, onClearButtonClick, chang
       <ClearButton data-testid='clearButton' onClick={onClearButtonClick}>Clear completed</ClearButton>
     </FilterWrapper>
   );
-};
+});
