@@ -40,7 +40,7 @@ export const Input = styled.input`
 
   @media (max-width: 767px) {
     &::placeholder {
-      font-size: 16px;
+      font-size: 15px;
     }
   }
 `;
