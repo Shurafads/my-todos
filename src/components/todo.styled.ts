@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
+export const Item = styled.li`
+  list-style-type: none;
+  border: 1px solid rgb(230, 230, 230);
+  background-color: rgb(255, 255, 255);
+`;
+
 export const Label = styled.label`
   cursor: pointer;
   display: flex;
-  width: 100%;
-  margin: 0;
-  border: 1px solid rgb(230, 230, 230);
-  background-color: rgb(255, 255, 255);
 
   &:hover {
     .mark-current::before {

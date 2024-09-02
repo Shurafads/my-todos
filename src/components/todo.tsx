@@ -1,4 +1,4 @@
-import { Text, Input, Label, Span } from "./todo.styled";
+import { Text, Input, Label, Span, Item } from "./todo.styled";
 
 type ToDoProps = {
   title: string;
@@ -10,10 +10,13 @@ type ToDoProps = {
 export default function ToDo({ title, id, isActive, onTodoClick }: ToDoProps) {
 
   return (
-    <Label>
-      <Input type="checkbox" value={title} onChange={() => onTodoClick(id)} checked={isActive} />
-      <Span className="mark-current" $isActive={isActive}></Span>
-      <Text $isActive={isActive}>{title}</Text>
-    </Label>
+    <Item>
+      <Label>
+        <Input type="checkbox" value={title} onChange={() => onTodoClick(id)} checked={isActive} />
+        <Span className="mark-current" $isActive={isActive}></Span>
+        <Text $isActive={isActive}>{title}</Text>
+      </Label>
+    </Item>
+
   );
 };

@@ -67,7 +67,9 @@ export const Button = styled.button`
   }
 `;
 
-export const TodosWrapper = styled.div`
+export const TodosWrapper = styled.ul`
+  margin: 0;
+  padding-left: 0;
   display: flex;
   flex-direction: column;
 `;
