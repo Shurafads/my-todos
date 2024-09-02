@@ -27,7 +27,7 @@ export default function Content({ todos, notificationStatus, inputValue, inputRe
     <ContentWrapper>
       {notificationStatus && (
         <Notification>
-          The input field doesn`t contain any tasks :)
+          The input field doesn`t contain any tasks
         </Notification>
       )}
 

@@ -81,4 +81,12 @@ export const Notification = styled.span`
   right: 0;
   text-align: center;
   color: rgb(230, 185, 185);
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+    top: -25px;
+  }
+  @media (max-width: 330px) {
+    top: -33px;
+  }
 `;
